@@ -1,0 +1,16 @@
+<div class="h-72 bg-white rounded-lg shadow-md overflow-hidden flex flex-col group cursor-pointer">
+	<div class="flex-1 relative overflow-hidden">
+		<img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src={{user.img}} alt="Fake User Image">
+	</div>
+	<div class="flex justify-between items-center p-3 bg-gray-50">
+		<p class="font-medium text-center flex items-center">
+			<span style="background-color: {{user.status.value}}" class="inline-flex mx-2 w-4 h-4 rounded-full animate-pulse "></span>
+			{{user.name}}
+			{{user.surname}},
+			{{user.age}}
+		</p>
+		<span class="text-lg text-gray-500 font-medium hover:translate-x-1 transition">
+			<a href={{path("app_usersapi_finduser",{id:user.id} )}}>Go-></a>
+		</span>
+	</div>
+</div>
